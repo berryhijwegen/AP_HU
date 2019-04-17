@@ -9,21 +9,15 @@ namespace VectorControle
             int falsecount = 0;
             for (int i = 0; i < booleans.Length; i++)
             {
-                switch(booleans[i]){
-                    case true:
-                        truecount += 1;
-                        break;
-                    case false:
-                        falsecount += 1;
-                        break;
+                if(booleans[i]){
+                    truecount += 1;
                 }
-
+                else {
+                    falsecount += 1;
+                }
             }
             
-            if(truecount > falsecount && falsecount < 13){
-                    return true;
-            }
-            return false;
+            return truecount > falsecount && falsecount < 13;
         }
     }
 }

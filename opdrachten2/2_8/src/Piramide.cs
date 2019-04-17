@@ -21,6 +21,7 @@ namespace Piramide
                 }
                 Console.WriteLine(string.Format("{0,"+ size + "}", s));
             }
+            
             for (int i = size; i > 1; i--)
             {
                 string s = "";
