@@ -13,9 +13,9 @@ namespace Matrix
 
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                for (int q = 0; q < matrix.GetLength(0); q++)
+                for (int j = 0; j < matrix.GetLength(0); j++)
                 {
-                    Console.Write(matrix[i,q] + " ");
+                    Console.Write(matrix[i,j] + " ");
                 }
 
                 Console.WriteLine("");
@@ -24,13 +24,13 @@ namespace Matrix
             Console.WriteLine("");
             
             // Transpose Matrix
-            int[,] TransposedMatrix = matrixGenerator.matrixTranspose(matrix);
+            int[,] z = matrixGenerator.matrixTranspose(matrix);
             
-            for (int i = 0; i < TransposedMatrix.GetLength(0); i++)
+            for (int i = 0; i < z.GetLength(0); i++)
             {
-                for (int q = 0; q < TransposedMatrix.GetLength(0); q++)
+                for (int j = 0; j < z.GetLength(0); j++)
                 {
-                    Console.Write(TransposedMatrix[i,q] + " ");
+                    Console.Write(z[i,j] + " ");
                 }
                 Console.WriteLine("");
             }

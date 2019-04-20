@@ -10,9 +10,9 @@ namespace Matrix
 
             for (int i = 0; i < n; i++)
             {
-                for (int q = 0; q < n; q++)
+                for (int j = 0; j < n; j++)
                 {
-                    matrix[i,q] = rnd.Next(1,100);
+                    matrix[i,j] = rnd.Next(1,100);
                 }
             }
             return matrix;
@@ -20,16 +20,17 @@ namespace Matrix
 
         public int[,] matrixTranspose(int[,] matrix){
             int length = matrix.GetLength(0);
-            int[,] transposedMatrix = new int[matrix.GetLength(0),matrix.GetLength(0)];
-
+            int temp = 0;
             for (int i = 0; i < length; i++)
             {
-                for (int q = 0; q < length; q++)
+                for (int j = 0 + 1; j < length; j++)
                 {
-                    transposedMatrix[i,q] = matrix[q,i];
+                    temp = matrix[i,j];
+                    matrix[i,j] = matrix[j,i];
+                    matrix[j,i] = temp;
                 }
             }
-            return transposedMatrix;
+            return matrix;
         }
     }
 }
