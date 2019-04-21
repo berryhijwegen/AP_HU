@@ -2,7 +2,7 @@ using System;
 
 namespace Prefix
 {
-    class Main
+    class Program
     {
         static void Main(){
             prefix x = new prefix(); 

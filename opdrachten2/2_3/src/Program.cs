@@ -2,7 +2,7 @@
 
 namespace VectorControle
 {
-    class Main
+    class Program
     {
         static void Main(string[] args)
         {

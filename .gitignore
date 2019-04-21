@@ -2,3 +2,5 @@
 **/obj/
 **.csproj
 .vscode
+.idea
+.vs
