@@ -6,8 +6,8 @@ namespace Interfaces
     {
         static void Main(string[] args)
         {
-            Point point1 = new Point(4, 4);
-            Point point2 = new Point(6, 4);
+            Point point1 = new Point(0, 0);
+            Point point2 = new Point(8, 8);
 
             Line line = new Line(point1, point2);
 

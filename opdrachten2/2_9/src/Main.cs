@@ -24,13 +24,13 @@ namespace Matrix
             Console.WriteLine("");
             
             // Transpose Matrix
-            int[,] z = matrixGenerator.matrixTranspose(matrix);
+            matrixGenerator.matrixTranspose( matrix);
             
-            for (int i = 0; i < z.GetLength(0); i++)
+            for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                for (int j = 0; j < z.GetLength(0); j++)
+                for (int j = 0; j < matrix.GetLength(0); j++)
                 {
-                    Console.Write(z[i,j] + " ");
+                    Console.Write(matrix[i,j] + " ");
                 }
                 Console.WriteLine("");
             }

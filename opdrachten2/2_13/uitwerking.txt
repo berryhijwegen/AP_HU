@@ -12,7 +12,7 @@ Ceilingcat:
 
 Happycat:
     Pianocat + Ceilingcat
-    red     (230 + 7) / 2   =   119
+    red     (230 + 7) / 2   =   118
     green   (10 + 4) / 2    =   7
     blue    (6 + 5) / 2     =   6
     n_lives 9 + 1           =   10

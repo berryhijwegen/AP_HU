@@ -18,7 +18,7 @@ namespace Matrix
             return matrix;
         }
 
-        public int[,] matrixTranspose(int[,] matrix){
+        public void matrixTranspose(int[,] matrix){
             int length = matrix.GetLength(0);
             int temp = 0;
             for (int i = 0; i < length; i++)
@@ -30,7 +30,7 @@ namespace Matrix
                     matrix[j,i] = temp;
                 }
             }
-            return matrix;
+            // return matrix;
         }
     }
 }

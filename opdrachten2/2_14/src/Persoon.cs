@@ -4,7 +4,7 @@ namespace Huisbaas
 {
     class Persoon
     {
-        private string naam;
+        public string naam;
         private int leeftijd;
 
         public Persoon(string nm, int lft){

@@ -7,7 +7,6 @@ namespace DiceGenerator
     {
         public static void rollDice(){
             Random random = new Random();
-            
             int count = 0;
             while(count < 3){
                 int state = 0, result = 0;
@@ -69,10 +68,12 @@ namespace DiceGenerator
                 }
                 count++;
                 Console.Write(String.Format("pad {0}: ", count));
+                string s = "";
                 foreach (int num in previousPositions)
                 {
-                    Console.Write(num + ",");
+                    s += num + ",";
                 }
+                Console.WriteLine(s.Substring(0,length - 1));
                 Console.WriteLine(String.Format("\nUitkomst: {0}\n", result));
             }
         }
