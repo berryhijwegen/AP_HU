@@ -94,7 +94,7 @@ namespace MarkovChainPRISM
             return "State number: " + stateNum + "\n" + 
                    "option 0: " + option0 + " with chance: " + chanceOption0 + "\n" + 
                    "option 1: " + option1 + " with chance: " + chanceOption1 + "\n" + 
-                   "result 0: " + result0 + " with chance: " + chanceResult1 + "\n" + 
+                   "result 0: " + result0 + " with chance: " + chanceResult0 + "\n" + 
                    "result 1: " + result1 + " with chance: " + chanceResult1 + "\n";
         }
     }   

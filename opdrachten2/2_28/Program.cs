@@ -36,37 +36,37 @@ namespace MarkovChainPRISM
                         string[] options = stateProperties[i].Split(':');     
                         for (int j = 0; j < options.Length; j++)
                         {
-                            // Console.WriteLine(options[j]);
                             if(options[j].Contains(".")){
                             }
                             else if(options[j].Contains("=")){
                                 double chance = Double.Parse(options[j - 1], CultureInfo.InvariantCulture);
                                 if(Regex.Matches(options[j], "=").Count > 1){
                                     if(currentState.result0 == 0 && currentState.option0 == 0){
-                                        currentState.result0 = Int32.Parse(options[j].Substring(options[j].IndexOf('d') + 3, options[j].Length - 12));
-                                        currentState.chanceResult0 = chance;
-                                        Console.WriteLine("changed!");
+                                        string step = options[j][options[j].IndexOf('d')-1..options[j].Length];
+                                        currentState.result0 = Int32.Parse(step[step.IndexOf('d') + 3..step.IndexOf(')')]);
+                                        currentState.chanceResult0 = currentState.result0 != 0 ? chance : 0.0;
                                     }
                                     else {
-                                        currentState.result1 = Int32.Parse(options[j].Substring(options[j].IndexOf('d') + 3, options[j].Length - 12));
+                                        string step = options[j][options[j].IndexOf('d')-1..options[j].Length];
+                                        currentState.result1 = Int32.Parse(step[step.IndexOf('d') + 3..step.IndexOf(')')]);
                                         currentState.chanceResult1 = chance;
                                     }
                                 }
                                 else {
                                     if(options[j].Contains('s')){
                                         if(currentState.result0 == 0 && currentState.option0 == 0){
-                                            currentState.option0 = Int32.Parse(options[j].Substring(options[j].IndexOf('d') + 5, options[j].Length - 5));
+                                            currentState.option0 = Int32.Parse(options[j][options[j].IndexOf('s') + 3..options[j].IndexOf(')')]);
                                             currentState.chanceOption0 = chance;
                                         }
                                         else {
-                                            currentState.option1 = Int32.Parse(options[j].Substring(options[j].IndexOf('s') + 3, options[j].Length - 5));
+                                            currentState.option1 = Int32.Parse(options[j][options[j].IndexOf('s') + 3..options[j].IndexOf(')')]);
                                             currentState.chanceOption1 = chance;
                                         }
-                                    }  
+                                    } 
                                 }
                             }
                         }
-                    }                    
+                    }              
                 }
                 Console.WriteLine(currentState.toString());
             }
