@@ -1,6 +1,6 @@
 using System;
 
-namespace MarkovChainGenerator
+namespace DiceGenerator
 {
     class State
     {

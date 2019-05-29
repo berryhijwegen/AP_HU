@@ -11,12 +11,8 @@ namespace DiceGenerator
             allStates = new List<State>();
         }
 
-        public void generateDice(int numofOutcomes){
-            List<State> tempList = new List<State>();
-            for (int i = numOfStates; i > 0; i--)
-            {
-                
-            }
+        public void generateDiceFromPRISM(string filename){
+
         }
 
         public void addState(State state){
