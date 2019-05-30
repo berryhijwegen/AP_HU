@@ -11,6 +11,18 @@ namespace MarkovChainPRISM
             path = new List<State>();
         }
 
+        public static MarkovChain generateMarkovChainFromPRISM(string path){
+            string[] states = System.IO.File.ReadAllLines(Environment.CurrentDirectory + "\\" +  path);
+            
+            MarkovChain markovChain = new MarkovChain();
+            foreach (string prismState in states)
+            {
+                State generatedState = PRISMConverter.PRISMToState(prismState);
+                markovChain.addState(generatedState);
+            }
+            return markovChain;
+        }
+
         public void addState(State state){
             path.Add(state);
         }

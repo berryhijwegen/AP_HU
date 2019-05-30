@@ -2,8 +2,9 @@ using System;
 
 namespace MarkovChainPRISM
 {
-    class State
+    public class State
     {
+        
         public int stateNum;
         public int option0;
         public double chanceOption0;
@@ -13,7 +14,19 @@ namespace MarkovChainPRISM
         public double chanceResult0;
         public int result1;
         public double chanceResult1;
-        
+
+        public State(int stateNum, int opt0 = 0, double chanceOpt0 = 0, int opt1 = 0, double chanceOpt1 = 0, int res0 = 0, double chanceRes0 = 0, int res1 = 0, double chanceRes1 = 0)
+        {
+            this.stateNum = stateNum;
+            this.option0 = opt0;
+            this.chanceOption0 = chanceOpt0;
+            this.option1 = opt1;
+            this.chanceOption1 = chanceOpt1;
+            this.result0 = res0;
+            this.chanceResult0 = chanceRes0;
+            this.result1 = res1;
+            this.chanceResult1 = chanceRes1;
+        }
         public State(){
 
         }
