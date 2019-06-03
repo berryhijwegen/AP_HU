@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MarkovChain
+namespace MarkovChainGenerator
 {
     class Program
     {
@@ -8,6 +8,7 @@ namespace MarkovChain
         {
             MarkovChain markovChainFromPRISM = MarkovChain.generateMarkovChainFromPRISM(args[0]);
 
+            Console.WriteLine(markovChainFromPRISM);
             for (int i = 0; i < 99; i++)
             {
                 Console.Write("pad " + (i+1) + ": ");
